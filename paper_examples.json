@@ -1,0 +1,592 @@
+[
+  {
+    "regime": "note-only",
+    "cases": [
+      {
+        "role": "answered",
+        "patient_id": "easy_typical_00",
+        "support": "typical",
+        "decision": "answer",
+        "message": "For this patient, starting vasopressors early is estimated to increase 28\u2011day mortality risk by 3.8 percentage points, with an uncertainty band from 1.0 to 6.8 percentage points. Among similar patients, observed mortality was 22.6% with early vasopressors versus 16.2% without; the unadjusted contrast was 6.4 percentage points, and the difference from the estimate reflects adjustment for which patients receive treatment. Values read from the note were age 71.0, heart rate 101.0, MAP 78.0, respiratory rate 21.0, temperature 36.9, SpO2 99.0, creatinine 1.8, WBC 7.2, platelets 241.0, bilirubin 0.3, and sex female. Values assumed from cohort distributions were SOFA 2.0\u20135.0, SAPS-II 23.0\u201357.0, and Charlson index 2.0\u20139.0.",
+        "unverified": [],
+        "record": {
+          "patient_id": "easy_typical_00",
+          "decision": "answer",
+          "estimate": 0.0377,
+          "band_low": 0.0101,
+          "band_high": 0.0679,
+          "estimate_pct_points": 3.8,
+          "band_low_pct_points": 1.0,
+          "band_high_pct_points": 6.8,
+          "band_is_degenerate": false,
+          "pct_of_range_harmful": 100.0,
+          "deferral_reasons": [],
+          "evidence": {
+            "contributing_patients": 18163,
+            "effective_n": 5094,
+            "effective_n_treated": 519,
+            "effective_n_control": 4589,
+            "observed_mortality_treated": "22.6%",
+            "observed_mortality_control": "16.2%",
+            "unadjusted_contrast_pct_points": 6.4
+          },
+          "read_from_note": {
+            "age": 71.0,
+            "heart rate": 101.0,
+            "MAP": 78.0,
+            "respiratory rate": 21.0,
+            "temperature": 36.9,
+            "SpO2": 99.0,
+            "creatinine": 1.8,
+            "WBC": 7.2,
+            "platelets": 241.0,
+            "bilirubin": 0.3,
+            "sex": "female"
+          },
+          "assumed_from_cohort": {
+            "SOFA": [
+              2.0,
+              5.0
+            ],
+            "SAPS-II": [
+              23.0,
+              57.0
+            ],
+            "Charlson index": [
+              2.0,
+              9.0
+            ]
+          },
+          "subgroup_rule": "respiratory rate <= 22.7 AND SAPS-II <= 50.5 AND age > 50.5",
+          "subgroup_rule_avg_effect": 0.0163,
+          "subgroup_rule_r2": 0.291,
+          "top_drivers": [
+            {
+              "covariate": "SAPS-II",
+              "range": [
+                23.0,
+                57.0
+              ],
+              "pct_of_uncertainty": 39.9,
+              "estimate_at_low_pct_points": 5.5,
+              "estimate_at_high_pct_points": 3.3,
+              "changes_direction": false,
+              "would_resolve": true
+            },
+            {
+              "covariate": "Charlson index",
+              "range": [
+                2.0,
+                9.0
+              ],
+              "pct_of_uncertainty": 18.6,
+              "estimate_at_low_pct_points": 3.6,
+              "estimate_at_high_pct_points": 5.4,
+              "changes_direction": false,
+              "would_resolve": true
+            },
+            {
+              "covariate": "SOFA",
+              "range": [
+                2.0,
+                5.0
+              ],
+              "pct_of_uncertainty": -0.4,
+              "estimate_at_low_pct_points": 3.0,
+              "estimate_at_high_pct_points": 3.7,
+              "changes_direction": false,
+              "would_resolve": true
+            }
+          ]
+        }
+      },
+      {
+        "role": "deferred",
+        "patient_id": "easy_implausible_00",
+        "support": "implausible",
+        "decision": "defer",
+        "message": "No reliable patient-specific estimate of the change in 28\u2011day mortality from starting vasopressors early can be given for this case. The uncertainty is driven mainly by the Charlson index (range 2.0 to 9.0). If the Charlson index were 2.0, the model\u2019s estimate would be a 10.1 percentage\u2011point increase in 28\u2011day mortality; if 9.0, it would be a 6.6 percentage\u2011point increase.",
+        "unverified": [],
+        "record": {
+          "patient_id": "easy_implausible_00",
+          "decision": "defer",
+          "estimate": 0.0693,
+          "band_low": 0.0373,
+          "band_high": 0.1566,
+          "estimate_pct_points": 6.9,
+          "band_low_pct_points": 3.7,
+          "band_high_pct_points": 15.7,
+          "band_is_degenerate": false,
+          "pct_of_range_harmful": 100.0,
+          "deferral_reasons": [
+            "out-of-support",
+            "estimator-uncertain"
+          ],
+          "evidence": {
+            "contributing_patients": 12908,
+            "effective_n": 2756,
+            "effective_n_treated": 361,
+            "effective_n_control": 2414,
+            "observed_mortality_treated": "42.4%",
+            "observed_mortality_control": "29.9%",
+            "unadjusted_contrast_pct_points": 12.5
+          },
+          "read_from_note": {
+            "age": 404.0,
+            "heart rate": 750.0,
+            "MAP": 424.0,
+            "respiratory rate": 113.0,
+            "temperature": 159.7,
+            "SpO2": 517.0,
+            "creatinine": 92.5,
+            "WBC": 723.6,
+            "platelets": 6358.0,
+            "bilirubin": 241.7,
+            "sex": "male"
+          },
+          "assumed_from_cohort": {
+            "SOFA": [
+              2.0,
+              5.0
+            ],
+            "SAPS-II": [
+              23.0,
+              57.0
+            ],
+            "Charlson index": [
+              2.0,
+              9.0
+            ]
+          },
+          "subgroup_rule": "respiratory rate > 22.7 AND Charlson index > 4.5 AND SAPS-II <= 47.5",
+          "subgroup_rule_avg_effect": 0.0334,
+          "subgroup_rule_r2": 0.291,
+          "top_drivers": [
+            {
+              "covariate": "Charlson index",
+              "range": [
+                2.0,
+                9.0
+              ],
+              "pct_of_uncertainty": 62.3,
+              "estimate_at_low_pct_points": 10.1,
+              "estimate_at_high_pct_points": 6.6,
+              "changes_direction": false,
+              "would_resolve": false
+            },
+            {
+              "covariate": "SAPS-II",
+              "range": [
+                23.0,
+                57.0
+              ],
+              "pct_of_uncertainty": 36.9,
+              "estimate_at_low_pct_points": 8.3,
+              "estimate_at_high_pct_points": 7.2,
+              "changes_direction": false,
+              "would_resolve": false
+            },
+            {
+              "covariate": "SOFA",
+              "range": [
+                2.0,
+                5.0
+              ],
+              "pct_of_uncertainty": 4.4,
+              "estimate_at_low_pct_points": 6.1,
+              "estimate_at_high_pct_points": 7.3,
+              "changes_direction": false,
+              "would_resolve": false
+            }
+          ]
+        },
+        "dialogue": [
+          {
+            "q": "Why can't you give me an answer for this patient?",
+            "intent": "why_defer",
+            "a": "I can\u2019t give a reliable estimate because the patient\u2019s recorded physiology is outside the model\u2019s data support (for example, heart rate 750 and MAP 424), so the model will not extrapolate. On top of that, the estimate is uncertain because key covariates were not in the note and had to be assumed from cohort ranges: the Charlson index is the main driver, shifting the effect between 10.1 and 6.6 percentage points across its range. SAPS-II moves it between 8.3 and 7.2 percentage points, and SOFA between 6.1 and 7.3 percentage points. Supplying exact values for these scores would not resolve the deferral here, because each is marked as not resolving and the out-of-support issue remains.",
+            "unverified": []
+          },
+          {
+            "q": "What would you need to answer?",
+            "intent": "what_would_help",
+            "a": "The main driver of uncertainty is the Charlson index (62.3% of the uncertainty): across its current range of 2.0\u20139.0, the estimate would shift between 10.1 and 6.6 percentage points, and knowing it exactly would not resolve the deferral. Next is SAPS-II (36.9%; range 23.0\u201357.0), which would move the estimate between 8.3 and 7.2 percentage points but would not resolve the deferral. SOFA contributes 4.4% (range 2.0\u20135.0), with the estimate spanning 6.1 to 7.3 percentage points; this also would not resolve the deferral, so none of these inputs alone would allow a definitive answer.",
+            "unverified": []
+          },
+          {
+            "q": "What if the SAPS-II score is 30?",
+            "intent": "what_if",
+            "a": "With a SAPS-II score of 30, the model still defers because the case remains partly out-of-support and the estimator remains uncertain. Because the decision is defer, no reliable treatment-effect estimate can be given and we decline to produce a number. Changing SAPS-II alone did not resolve these issues.",
+            "unverified": []
+          },
+          {
+            "q": "What happened to similar patients in your data?",
+            "intent": "similar_patients",
+            "a": "Among similar patients, the variance-adjusted effective sample size was 361 in the early-vasopressor arm and 2414 in the control arm; these are not patient counts and the arms do not sum to the overall figure. Observed mortality was 42.4% with early vasopressors versus 29.9% without. The unadjusted contrast was 12.5 percentage points, and this differs from the model\u2019s treatment-effect estimate because the model adjusts for which patients tend to receive treatment.",
+            "unverified": []
+          }
+        ]
+      },
+      {
+        "role": "resolvable",
+        "patient_id": "easy_typical_01",
+        "support": "typical",
+        "decision": "defer",
+        "message": "I cannot provide a reliable estimate of the 28-day mortality change from starting vasopressors early for this patient. The main driver of uncertainty is the SAPS-II score, which is only known to lie between 23.0 and 57.0. At SAPS-II = 23.0, the model\u2019s estimate becomes a 5.1 percentage-point increase in mortality, while at SAPS-II = 57.0 it becomes a 2.1 percentage-point decrease. Supplying the exact SAPS-II would help resolve this uncertainty.",
+        "unverified": [],
+        "record": {
+          "patient_id": "easy_typical_01",
+          "decision": "defer",
+          "estimate": -0.0049,
+          "band_low": -0.0366,
+          "band_high": 0.0689,
+          "estimate_pct_points": -0.5,
+          "band_low_pct_points": -3.7,
+          "band_high_pct_points": 6.9,
+          "band_is_degenerate": false,
+          "pct_of_range_harmful": 42.5,
+          "deferral_reasons": [
+            "extraction-fragile"
+          ],
+          "evidence": {
+            "contributing_patients": 19140,
+            "effective_n": 5579,
+            "effective_n_treated": 664,
+            "effective_n_control": 4940,
+            "observed_mortality_treated": "18.5%",
+            "observed_mortality_control": "15.5%",
+            "unadjusted_contrast_pct_points": 3.0
+          },
+          "read_from_note": {
+            "age": 72.0,
+            "heart rate": 87.0,
+            "MAP": 73.0,
+            "respiratory rate": 19.0,
+            "temperature": 37.2,
+            "SpO2": 99.0,
+            "creatinine": "renal_impairment -> [1.3, 2.6]",
+            "WBC": 13.3,
+            "bilirubin": 0.9,
+            "sex": "female"
+          },
+          "assumed_from_cohort": {
+            "SOFA": [
+              2.0,
+              5.0
+            ],
+            "SAPS-II": [
+              23.0,
+              57.0
+            ],
+            "Charlson index": [
+              2.0,
+              9.0
+            ],
+            "platelets": [
+              65.0,
+              327.0
+            ]
+          },
+          "subgroup_rule": "respiratory rate <= 22.7 AND SAPS-II <= 50.5 AND age > 50.5",
+          "subgroup_rule_avg_effect": 0.0163,
+          "subgroup_rule_r2": 0.291,
+          "top_drivers": [
+            {
+              "covariate": "SAPS-II",
+              "range": [
+                23.0,
+                57.0
+              ],
+              "pct_of_uncertainty": 57.6,
+              "estimate_at_low_pct_points": 5.1,
+              "estimate_at_high_pct_points": -2.1,
+              "changes_direction": true,
+              "would_resolve": true
+            },
+            {
+              "covariate": "platelets",
+              "range": [
+                65.0,
+                327.0
+              ],
+              "pct_of_uncertainty": 6.4,
+              "estimate_at_low_pct_points": -1.9,
+              "estimate_at_high_pct_points": 0.5,
+              "changes_direction": true,
+              "would_resolve": false
+            },
+            {
+              "covariate": "creatinine",
+              "range": [
+                1.3,
+                2.6
+              ],
+              "pct_of_uncertainty": 4.7,
+              "estimate_at_low_pct_points": -0.7,
+              "estimate_at_high_pct_points": -0.1,
+              "changes_direction": false,
+              "would_resolve": false
+            }
+          ]
+        },
+        "dialogue": [
+          {
+            "q": "Why can't you give me an answer for this patient?",
+            "intent": "why_defer",
+            "a": "I\u2019m deferring because the chart extraction was fragile, so key severity information wasn\u2019t read directly. The main driver is SAPS-II, which was only assumed over 23.0 to 57.0 and accounts for 57.6% of the uncertainty. Across that range, the estimated change in mortality from starting vasopressors early could be 5.1 percentage points or -2.1 percentage points, switching direction. If you can supply the patient\u2019s SAPS-II, that would resolve the deferral and allow a stable estimate.",
+            "unverified": []
+          },
+          {
+            "q": "What would you need to answer?",
+            "intent": "what_would_help",
+            "a": "We cannot give a reliable estimate yet. SAPS-II drives most of the uncertainty and, if provided, would resolve the deferral; at its low end the model implies a 5.1 percentage-point increase in 28-day mortality from early vasopressors, and at its high end a 2.1 percentage-point decrease. Uncertainty shares in order are: SAPS-II 57.6%, platelets 6.4%, creatinine 4.7%, and SOFA 1.9%; only SAPS-II would actually resolve the deferral, whereas the others would not on their own.",
+            "unverified": []
+          },
+          {
+            "q": "What if the SAPS-II score is 30?",
+            "intent": "what_if",
+            "a": "If the SAPS-II score is 30, the model can provide an estimate for starting vasopressors early. It estimates a 3.6 percentage point increase in 28-day mortality, with an uncertainty band from -0.7 to 7.4 percentage points. Because the band crosses zero, the data remain compatible with a small decrease or an increase in risk.",
+            "unverified": []
+          },
+          {
+            "q": "What happened to similar patients in your data?",
+            "intent": "similar_patients",
+            "a": "Among similar patients, the variance-adjusted effective sample size was 664 in the early-vasopressor arm and 4940 in the no-early-vasopressor arm. Observed mortality was 18.5% with early vasopressors and 15.5% without, an unadjusted contrast of 3.0 percentage points. These are variance-adjusted effective sizes (not patient counts) and the arm totals do not sum to the overall figure; the unadjusted contrast differs from the model estimate because the model adjusts for which patients receive treatment.",
+            "unverified": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "regime": "note+composites",
+    "cases": [
+      {
+        "role": "answered",
+        "patient_id": "easy_typical_00",
+        "support": "typical",
+        "decision": "answer",
+        "message": "Starting vasopressors early is estimated to increase 28-day mortality by 7.4 percentage points. This estimate has no interval uncertainty because all covariates were read exactly. Among similar patients, observed mortality was 19.1% with early vasopressors versus 11.7% without. The unadjusted contrast was 7.4 percentage points, which is the same as the estimate after adjustment for which patients receive treatment. All values were read from the note (age 71.0, heart rate 101.0, MAP 78.0, respiratory rate 21.0, temperature 36.9, SpO2 99.0, creatinine 1.8, WBC 7.2, platelets 241.0, bilirubin 0.3, SOFA 2.0, SAPS-II 26.0, Charlson index 7.0, sex female), and none were assumed from cohort distributions.",
+        "unverified": [],
+        "record": {
+          "patient_id": "easy_typical_00",
+          "decision": "answer",
+          "estimate": 0.0736,
+          "band_low": 0.0736,
+          "band_high": 0.0736,
+          "estimate_pct_points": 7.4,
+          "band_low_pct_points": 7.4,
+          "band_high_pct_points": 7.4,
+          "band_is_degenerate": true,
+          "pct_of_range_harmful": 100.0,
+          "deferral_reasons": [],
+          "evidence": {
+            "contributing_patients": 5295,
+            "effective_n": 1558,
+            "effective_n_treated": 108,
+            "effective_n_control": 1474,
+            "observed_mortality_treated": "19.1%",
+            "observed_mortality_control": "11.7%",
+            "unadjusted_contrast_pct_points": 7.4
+          },
+          "read_from_note": {
+            "age": 71.0,
+            "heart rate": 101.0,
+            "MAP": 78.0,
+            "respiratory rate": 21.0,
+            "temperature": 36.9,
+            "SpO2": 99.0,
+            "creatinine": 1.8,
+            "WBC": 7.2,
+            "platelets": 241.0,
+            "bilirubin": 0.3,
+            "SOFA": 2.0,
+            "SAPS-II": 26.0,
+            "Charlson index": 7.0,
+            "sex": "female"
+          },
+          "assumed_from_cohort": {},
+          "subgroup_rule": "respiratory rate <= 22.7 AND SAPS-II <= 50.5 AND age > 50.5",
+          "subgroup_rule_avg_effect": 0.0163,
+          "subgroup_rule_r2": 0.291,
+          "top_drivers": []
+        }
+      },
+      {
+        "role": "deferred",
+        "patient_id": "easy_implausible_00",
+        "support": "implausible",
+        "decision": "defer",
+        "message": "No reliable patient-specific estimate can be given because this case is out-of-support for the model. The uncertainty is driven by covariates read from the note that lie far outside the model\u2019s learned ranges, including age, heart rate, MAP, respiratory rate, temperature, SpO2, creatinine, WBC, platelets, bilirubin, SOFA, SAPS-II, and Charlson index. Because the model has no support across this region, we cannot say what the estimate would be at either end of a plausible range for the key covariate. If clinically verified, in-range values for these covariates are available, supplying them could allow the model to produce a reliable estimate.",
+        "unverified": [],
+        "record": {
+          "patient_id": "easy_implausible_00",
+          "decision": "defer",
+          "estimate": 0.0396,
+          "band_low": 0.0396,
+          "band_high": 0.0396,
+          "estimate_pct_points": 4.0,
+          "band_low_pct_points": 4.0,
+          "band_high_pct_points": 4.0,
+          "band_is_degenerate": true,
+          "pct_of_range_harmful": 100.0,
+          "deferral_reasons": [
+            "out-of-support"
+          ],
+          "evidence": {
+            "contributing_patients": 2970,
+            "effective_n": 800,
+            "effective_n_treated": 234,
+            "effective_n_control": 568,
+            "observed_mortality_treated": "55.8%",
+            "observed_mortality_control": "51.8%",
+            "unadjusted_contrast_pct_points": 4.0
+          },
+          "read_from_note": {
+            "age": 404.0,
+            "heart rate": 750.0,
+            "MAP": 424.0,
+            "respiratory rate": 113.0,
+            "temperature": 159.7,
+            "SpO2": 517.0,
+            "creatinine": 92.5,
+            "WBC": 723.6,
+            "platelets": 6358.0,
+            "bilirubin": 241.7,
+            "SOFA": 60.0,
+            "SAPS-II": 361.0,
+            "Charlson index": 71.0,
+            "sex": "male"
+          },
+          "assumed_from_cohort": {},
+          "subgroup_rule": "respiratory rate > 22.7 AND Charlson index > 4.5 AND SAPS-II > 47.5",
+          "subgroup_rule_avg_effect": 0.0845,
+          "subgroup_rule_r2": 0.291,
+          "top_drivers": []
+        },
+        "dialogue": [
+          {
+            "q": "Why can't you give me an answer for this patient?",
+            "intent": "why_defer",
+            "a": "I can\u2019t give an answer because this case is out-of-support for the model. Several values read from the note are far outside the cohort the model was trained on, including age 404.0, heart rate 750.0, MAP 424.0, respiratory rate 113.0, temperature 159.7, SpO2 517.0, creatinine 92.5, WBC 723.6, platelets 6358.0, bilirubin 241.7, SOFA 60.0, SAPS-II 361.0, and Charlson index 71.0. With inputs like these, the model declines to extrapolate, so no reliable estimate of the 28-day mortality change from starting vasopressors early can be provided.",
+            "unverified": []
+          },
+          {
+            "q": "What would you need to answer?",
+            "intent": "what_would_help",
+            "a": "There is nothing you could supply to resolve this deferral. All covariates were read directly from the note, and the deferral arises because the patient\u2019s covariate values are out of the model\u2019s supported range, not because of any missing data. Since no inputs are missing, there are no options to provide that would change the decision.",
+            "unverified": []
+          },
+          {
+            "q": "What if the SAPS-II score is 30?",
+            "intent": "what_if",
+            "a": "The decision remains defer: with SAPS-II set to 30, this case is outside the model\u2019s support and the estimator is uncertain. The SAPS-II had already been read exactly from the note, and substituting 30 does not overcome those limitations. Because we are deferring, no reliable estimate or interval can be given.",
+            "unverified": []
+          },
+          {
+            "q": "What happened to similar patients in your data?",
+            "intent": "similar_patients",
+            "a": "Among similar patients, the variance-adjusted effective sample size was 234 in the early-vasopressor arm and 568 in the control arm (these are effective sizes, not patient counts, and the arms do not sum to the overall figure). Observed 28-day mortality was 55.8% with early vasopressors and 51.8% without. The unadjusted contrast was 4.0 percentage points, and this differs from the model\u2019s effect because the model adjusts for which patients tend to receive treatment.",
+            "unverified": []
+          }
+        ]
+      },
+      {
+        "role": "resolvable",
+        "patient_id": "easy_typical_03",
+        "support": "typical",
+        "decision": "defer",
+        "message": "The model cannot provide a reliable patient-specific estimate for the effect of starting vasopressors early because of estimator uncertainty. This uncertainty is driven entirely by creatinine, which was not read from the note and was assumed from cohort distributions. If creatinine were 0.6, the estimated absolute change in 28-day mortality would be 6.3 percentage points; if 3.7, it would be 6.9 percentage points. Across this range the effect remains harmful (higher mortality). Providing creatinine would not resolve this uncertainty, so we defer.",
+        "unverified": [],
+        "record": {
+          "patient_id": "easy_typical_03",
+          "decision": "defer",
+          "estimate": 0.0654,
+          "band_low": 0.0573,
+          "band_high": 0.0696,
+          "estimate_pct_points": 6.5,
+          "band_low_pct_points": 5.7,
+          "band_high_pct_points": 7.0,
+          "band_is_degenerate": false,
+          "pct_of_range_harmful": 100.0,
+          "deferral_reasons": [
+            "estimator-uncertain"
+          ],
+          "evidence": {
+            "contributing_patients": 6723,
+            "effective_n": 1553,
+            "effective_n_treated": 112,
+            "effective_n_control": 1453,
+            "observed_mortality_treated": "20.8%",
+            "observed_mortality_control": "14.3%",
+            "unadjusted_contrast_pct_points": 6.5
+          },
+          "read_from_note": {
+            "age": 74.0,
+            "heart rate": 104.0,
+            "MAP": 87.0,
+            "respiratory rate": 17.0,
+            "temperature": 37.4,
+            "SpO2": 98.0,
+            "WBC": 12.3,
+            "platelets": 128.0,
+            "bilirubin": 1.5,
+            "SOFA": 5.0,
+            "SAPS-II": 26.0,
+            "Charlson index": 8.0,
+            "sex": "male"
+          },
+          "assumed_from_cohort": {
+            "creatinine": [
+              0.6,
+              3.7
+            ]
+          },
+          "subgroup_rule": "respiratory rate <= 22.7 AND SAPS-II <= 50.5 AND age > 50.5",
+          "subgroup_rule_avg_effect": 0.0163,
+          "subgroup_rule_r2": 0.291,
+          "top_drivers": [
+            {
+              "covariate": "creatinine",
+              "range": [
+                0.6,
+                3.7
+              ],
+              "pct_of_uncertainty": 100.0,
+              "estimate_at_low_pct_points": 6.3,
+              "estimate_at_high_pct_points": 6.9,
+              "changes_direction": false,
+              "would_resolve": false
+            }
+          ]
+        },
+        "dialogue": [
+          {
+            "q": "Why can't you give me an answer for this patient?",
+            "intent": "why_defer",
+            "a": "I can\u2019t give a reliable patient-specific estimate because the model is estimator-uncertain for this case. The uncertainty is driven entirely by the creatinine value, which was not read from the note and had to be assumed from a cohort range of 0.6 to 3.7. Across that range, the estimated absolute change in 28-day mortality from starting vasopressors early would vary from 6.3 to 6.9 percentage points higher. Providing the exact creatinine would not resolve this deferral, as it would not eliminate the estimator\u2019s uncertainty.",
+            "unverified": []
+          },
+          {
+            "q": "What would you need to answer?",
+            "intent": "what_would_help",
+            "a": "I can\u2019t give a reliable estimate because the decision remains defer. The only uncertain input is creatinine, ranging from 0.6 to 3.7, which accounts for 100.0% of the uncertainty, but providing it would not resolve the deferral. At the low end (0.6) the estimate would be 6.3 percentage points, and at the high end (3.7) it would be 6.9 percentage points.",
+            "unverified": []
+          },
+          {
+            "q": "What if the SAPS-II score is 30?",
+            "intent": "what_if",
+            "a": "The decision remains defer because the estimator is still uncertain, so no reliable estimate can be given; deferring means we decline to produce a number. SAPS-II had already been read from the note, and hypothetically setting it to 30 does not resolve this model uncertainty. Additional information that addresses estimator uncertainty would be needed before a reliable estimate could be produced.",
+            "unverified": []
+          },
+          {
+            "q": "What happened to similar patients in your data?",
+            "intent": "similar_patients",
+            "a": "Among similar patients, observed mortality was 20.8% with early vasopressors and 14.3% without, an unadjusted contrast of 6.5 percentage points. The variance-adjusted effective sample sizes were 112 in the treated arm and 1453 in the control arm; these are not patient counts, and the arms do not sum to the overall effective size of 1553. This unadjusted contrast differs from the model estimate because the model adjusts for which patients are selected to receive treatment.",
+            "unverified": []
+          }
+        ]
+      }
+    ]
+  }
+]

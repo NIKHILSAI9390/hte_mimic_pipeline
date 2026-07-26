@@ -1,0 +1,39 @@
+# ignore everything by default
+*
+
+# --- core pipeline code ---
+!clean_data.py
+!forest_real.py
+!m1_psm.py
+!explain_real.py
+!calibrate.py
+!interval_predict.py
+!gate.py
+!gate_eval.py
+!recalibrate.py
+!oracle_check.py
+!attribute.py
+!evidence.py
+!serve.py
+!ask.py
+!examples.py
+!sections.py
+!gen_synthetic_notes.py
+!scrub_notes.py
+!extract.py
+!score_extraction.py
+!score_real.py
+!build_real_testset.py
+
+# --- safe artifacts (synthetic / derived, no credentialed text) ---
+!calibration.json
+!thresholds.json
+!synthetic_notes_scrubbed.json
+!served_note_only.json
+!served_with_composites.json
+!paper_examples.json
+!extraction_openai_gpt_5.json
+
+# --- docs ---
+!README.md
+!.gitignore
